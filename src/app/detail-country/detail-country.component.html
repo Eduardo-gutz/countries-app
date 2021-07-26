@@ -1,0 +1,21 @@
+<main class="country">
+  <button class="btn btn_big-margin" routerLink=""> Back</button>
+  <img class="country__flag" [src]="country.flag" [alt]="country.name">
+  <h1 class="country__name">{{country.name}}</h1>
+  <ul class="country-data">
+    <li class="country-data__item"><strong>Native Name: </strong>{{country.nativeName}}</li>
+    <li class="country-data__item"><strong>Population: </strong>{{country.population}}</li>
+    <li class="country-data__item"><strong>Region: </strong>{{country.region}}</li>
+    <li class="country-data__item"><strong>Sub Region: </strong>{{country.subregion}}</li>
+    <li class="country-data__item"><strong>Capital: </strong>{{country.capital}}</li>
+  </ul>
+  <ul class="country-data">
+    <li class="country-data__item"><strong>Top Level Domain: </strong>{{country.topLevelDomain}}</li>
+    <li class="country-data__item"><strong>Currencies: </strong><span *ngFor="let currency of country.currencies">{{currency.name}}, </span></li>
+    <li class="country-data__item"><strong>Languages: </strong><span *ngFor="let language of country.languages">{{language.name}}, </span></li>
+  </ul>
+  <div class="borders">
+    <h2>Border Countries</h2>
+    <button class="btn" *ngFor="let border of borders" [routerLink]="['/country', border.alpha3Code]">{{border.name}}</button>
+  </div>
+</main>

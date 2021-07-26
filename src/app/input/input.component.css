@@ -1,0 +1,21 @@
+.form-search {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  max-width: 30rem;
+  height: 3rem;
+  background-color: var(--elements);
+  border-radius: .3rem;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.form-search__btn {
+  width: 20%;
+  opacity: .5;
+  color: var(--text);
+}
+.form-search__input {
+  width: 75%;
+  height: 100%;
+  background-color: var(--elements);
+}

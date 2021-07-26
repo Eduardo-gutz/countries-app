@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'practica';
+  darkMode:boolean = false;
+
+  changeDarkMode($event: boolean) {
+    this.darkMode = $event
+  }
 }

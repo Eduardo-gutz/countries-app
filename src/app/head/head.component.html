@@ -1,0 +1,10 @@
+<header class="header">
+  <h1 class="header__title">Where in the world?</h1>
+  <button class="header__button header__button_light" (click)="activeDarkMode()">
+    <i class='bx bx-moon bx-sm' *ngIf="dark; else elseBlock"></i>
+    <ng-template #elseBlock><i class='bx bx-sun bx-sm'></i></ng-template>
+    <span *ngIf="dark; else lightBlock">Dark</span>
+    <ng-template #lightBlock><span>Light</span></ng-template>
+    Mode
+  </button>
+</header>

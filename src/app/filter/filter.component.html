@@ -1,0 +1,10 @@
+<div class="filter">
+  <div class="filter__btn" (click)="dropDown()">
+    <p *ngIf="continentFilter; else elseBlock">{{continentFilter}}</p>
+    <ng-template #elseBlock>Filter by Region</ng-template>
+    <i class='bx bx-chevron-down bx-sm'></i>
+  </div>
+  <ul class="filter__continents" [class.active]="active">
+    <li class="filter__continent" *ngFor="let continent of continents" (click)="select(continent)">{{continent}}</li>
+  </ul>
+</div>

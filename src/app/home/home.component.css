@@ -1,0 +1,32 @@
+.main {
+  display: grid;
+  grid-template-columns: 1fr;
+  min-height: 90vh;
+}
+.filter {
+  margin: 0 5%;
+}
+.input {
+  margin: 1.5rem 5%;
+}
+@media (min-width: 768px) {
+  .main {
+    grid-template-columns: 1fr 1fr;
+  }
+  .header {
+    grid-column: 1 / -1;
+  }
+  .input {
+    margin: 1.5rem 10%;
+    grid-column: 1;
+  }
+  .filter {
+    justify-self: end;
+    align-self: center;
+    margin: 0 10%;
+    grid-column: 2;
+  }
+  .countries {
+    grid-column: 1 / -1;
+  }
+}

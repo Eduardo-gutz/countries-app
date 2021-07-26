@@ -1,0 +1,37 @@
+.filter {
+  position: relative;
+  width: 12.5rem;
+}
+.filter__btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 12.5rem;
+  height: 3rem;
+  background-color: var(--elements);
+  font-size: .8rem;
+  padding: 1rem;
+  margin-bottom: .5rem;
+  box-shadow: var(--shadow);
+}
+.filter__continents {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  width: 12.5rem;
+  height: 0;
+  background-color: var(--elements);;
+  padding: 0 1.5rem;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: height .4s ease-in;
+}
+.filter__continent {
+  padding-top: .25rem;
+  height: 1.5rem;
+  font-size: .8rem;
+}
+.active {
+  height: 9rem;
+}

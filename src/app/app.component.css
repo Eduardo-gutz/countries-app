@@ -1,0 +1,5 @@
+.container {
+  background-color: var(--background);
+  color: var(--text);
+  transition: background .5s ease-in;
+}
