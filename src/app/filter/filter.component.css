@@ -9,10 +9,12 @@
   width: 12.5rem;
   height: 3rem;
   background-color: var(--elements);
+  border-radius: var(--radius);
   font-size: .8rem;
   padding: 1rem;
   margin-bottom: .5rem;
   box-shadow: var(--shadow);
+  cursor: pointer;
 }
 .filter__continents {
   display: flex;
@@ -22,6 +24,7 @@
   width: 12.5rem;
   height: 0;
   background-color: var(--elements);;
+  border-radius: var(--radius);
   padding: 0 1.5rem;
   box-shadow: var(--shadow);
   overflow: hidden;
@@ -31,6 +34,7 @@
   padding-top: .25rem;
   height: 1.5rem;
   font-size: .8rem;
+  cursor: pointer;
 }
 .active {
   height: 9rem;

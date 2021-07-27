@@ -1,7 +1,6 @@
 .main {
   display: grid;
   grid-template-columns: 1fr;
-  min-height: 90vh;
 }
 .filter {
   margin: 0 5%;

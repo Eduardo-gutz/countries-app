@@ -1,5 +1,6 @@
 <div class="container" [class.dark]="darkMode">
-  <!-- header to app restCountries -->
+  <app-load *ngIf="!ready">
+  </app-load>
   <app-head class="header" (darkMode)="changeDarkMode($event)"></app-head>
   <router-outlet></router-outlet>
 </div>

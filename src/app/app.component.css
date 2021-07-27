@@ -1,5 +1,6 @@
 .container {
   background-color: var(--background);
+  min-height: 100vh;
   color: var(--text);
   transition: background .5s ease-in;
 }

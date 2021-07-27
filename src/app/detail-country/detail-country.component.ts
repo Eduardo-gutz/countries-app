@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ApiService } from '../api/api.service';
+import { DataReadyService } from '../api/data-ready.service';
 
 @Component({
   selector: 'app-detail-country',
@@ -11,13 +12,15 @@ export class DetailCountryComponent implements OnInit {
   country: any;
   borders: any = [];
 
-  constructor(private rutaActiva: ActivatedRoute, private api: ApiService) { }
+  constructor(private dataReady: DataReadyService, private rutaActiva: ActivatedRoute, private api: ApiService) { }
 
   ngOnInit(): void {
+    this.dataReady.ready.emit({data: false});
     this.rutaActiva.params.subscribe(code =>{
       this.api.getCountries(`alpha/${code.code.toLowerCase()}`).subscribe(response => {
         this.country = response
         this.getBorders();
+        this.dataReady.ready.emit({data: true});
       })
     })
   }

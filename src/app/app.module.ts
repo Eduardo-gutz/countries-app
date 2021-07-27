@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { routing } from './app.routing';
 import { DetailCountryComponent } from './detail-country/detail-country.component';
+import { LoadComponent } from './load/load.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { DetailCountryComponent } from './detail-country/detail-country.componen
     FilterComponent,
     CountryComponent,
     HomeComponent,
-    DetailCountryComponent
+    DetailCountryComponent,
+    LoadComponent
   ],
   imports: [
     BrowserModule,

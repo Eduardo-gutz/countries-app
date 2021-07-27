@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { ApiService } from '../api/api.service';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { DataCountiesService } from '../api/data-counties.service';
+import { DataReadyService } from '../api/data-ready.service';
 
 @Component({
   selector: 'app-country',
@@ -8,20 +8,16 @@ import { DataCountiesService } from '../api/data-counties.service';
   styleUrls: ['./country.component.css']
 })
 export class CountryComponent implements OnInit {
+
   countries: any;
 
-  constructor(private api: ApiService, private dataCountries: DataCountiesService) { }
+  constructor(private dataReady: DataReadyService, private dataCountries: DataCountiesService) { }
 
   ngOnInit(): void {
+    this.dataReady.ready.emit({data: false});
     this.dataCountries.data.subscribe(data => {
       this.countries= data.data;
+      this.dataReady.ready.emit({data: true});
     })
   }
-
-  countriesList(filter: string) {
-    this.api.getCountries(filter).subscribe(response => {
-      this.countries = response;
-    })
-  }
-
 }

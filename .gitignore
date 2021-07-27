@@ -43,3 +43,10 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+.editorconfig
+angular.json
+karma.conf.js
+package-lock.json
+README.md
+tsconfig.app.json
+tsconfig.tsconfig.spec.json

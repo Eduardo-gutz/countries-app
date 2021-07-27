@@ -5,7 +5,6 @@ import { HomeComponent } from "./home/home.component";
 const appRoutes = [
   {path: '', component: HomeComponent, pathMatch: 'full'},
   {path: 'country/:code', component: DetailCountryComponent, pathMatch: 'full'},
-
 ];
 
-export const routing = RouterModule.forRoot(appRoutes);
+export const routing = RouterModule.forRoot(appRoutes, {scrollPositionRestoration: 'enabled'});

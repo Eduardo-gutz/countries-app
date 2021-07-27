@@ -11,15 +11,21 @@ export class HeadComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    if(localStorage.darkMode) {
+      this.dark = !JSON.parse(localStorage.darkMode);
+    } else {
+
+    }
   }
   activeDarkMode() {
     this.darkMode.emit(this.dark);
     if(!this.dark) {
       this.dark = true;
+      localStorage.setItem('darkMode', JSON.stringify(false));
     } else {
       this.dark = false;
+      localStorage.setItem('darkMode', JSON.stringify(true));
     }
-
   }
 
 }
