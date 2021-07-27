@@ -1,7 +1,6 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
-/dist
 /tmp
 /out-tsc
 # Only exists if Bazel was run
@@ -47,6 +46,5 @@ Thumbs.db
 angular.json
 karma.conf.js
 package-lock.json
-README.md
 tsconfig.app.json
 tsconfig.tsconfig.spec.json
