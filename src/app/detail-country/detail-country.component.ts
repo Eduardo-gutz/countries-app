@@ -26,10 +26,15 @@ export class DetailCountryComponent implements OnInit {
   }
   getBorders() {
     this.borders = [];
-    for(let border of this.country.borders) 
-    this.api.getCountries(`alpha/${border.toLowerCase()}`).subscribe(response => {
-      let res = response;
-      this.borders.push(res)
-    })
+    console.log();
+    if(this.country.borders) {
+      for(let border of this.country.borders) {
+        this.api.getCountries(`alpha/${border.toLowerCase()}`).subscribe(response => {
+          let res = response;
+          this.borders.push(res)
+        })
+      }
+
+    }
   }
 }
