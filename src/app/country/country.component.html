@@ -1,6 +1,6 @@
 <div class="countries">
   <article class="country" *ngFor="let country of countries" [routerLink]="['/country', country.alpha3Code]" routerLinkActive="active">
-    <img class="country__flag" [src]="country['flag']" alt="">
+    <img class="country__flag" [src]="country['flags'].svg" alt="">
     <h2 class="country__name">{{ country['name'] }}</h2>
     <p class="country__data">Population: <span class="country__data_light">{{ country['population'] }}</span></p>
     <p class="country__data">Region: <span class="country__data_light">{{ country['region'] }}</span></p>

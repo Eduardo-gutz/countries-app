@@ -48,3 +48,7 @@ karma.conf.js
 package-lock.json
 tsconfig.app.json
 tsconfig.tsconfig.spec.json
+
+package-lock.json
+dist
+

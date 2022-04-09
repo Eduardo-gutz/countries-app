@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ApiService {
-  url: string = 'https://restcountries.eu/rest/v2/'
+  url: string = 'https://restcountries.com/v2/'
 
   constructor(private http: HttpClient) {}
 

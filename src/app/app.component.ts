@@ -13,7 +13,7 @@ export class AppComponent {
   constructor(private dataReady: DataReadyService) {
   }
   ngOnInit() {
-    this.darkMode = JSON.parse(localStorage.darkMode);
+    this.darkMode = localStorage.darkMode? JSON.parse(localStorage.darkMode) : null;
     this.dataReady.ready.subscribe(data => {
       this.ready = data.data;
     })
